@@ -33,7 +33,7 @@ for ($i = 0; $i < $numero_temperaturas; $i++){
 
 for ($i = 0; $i < $numero_temperaturas; $i++) {
 
-    a
+    
 
 }
 ?>

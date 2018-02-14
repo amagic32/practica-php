@@ -6,7 +6,7 @@
 
     <div>
     
-        <input type="number" name="nota" min="0" max="10" value="5">
+        <input type="text" name="nota" min="0" max="10" value="5">
     
     </div>
 
@@ -22,51 +22,32 @@
 
 $nota = $_GET["nota"];
 
-switch ($nota) {
+echo "$nota";
 
-    case 0:
-        echo "Insuficiente";
-        break;
+echo "</br>";
 
-    case 1:
+
+
+if ($nota >= 0 && $nota < 5) {
+
     echo "Insuficiente";
-    break;
 
-    case 2:
-    echo "Insuficiente";
-    break;
+} else if ($nota >= 5 && $nota <6) {
 
-    case 3:
-    echo "Insuficiente";
-    break;
-
-    case 4:
-    echo "Insuficiente";
-    break;
-
-    case 5:
     echo "Suficiente";
-    break;
 
-    case 6:
-    echo "Suficiente";
-    break;
+} else if ($nota >= 6 && $nota <7) {
 
-    case 7:
+    echo "Bien";
+
+} else if ($nota >= 7 && $nota <9) {
+
     echo "Notable";
-    break;
 
-    case 8:
-    echo "Notable";
-    break;
+} else if ($nota >= 9 && $nota <10) {
 
-    case 9:
     echo "Sobresaliente";
-    break;
 
-    case 10:
-    echo "Sobresaliente";
-    break;
 }
 
 ?>

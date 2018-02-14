@@ -4,7 +4,7 @@
 
     <div>
     
-        <input type="number" name="numero_temperaturas" min="1" max="10" value="1">
+        <input type="number" name="numero_temperaturas" min="1" max="100" value="1">
     
     </div>
 
@@ -20,20 +20,31 @@
 
 $numero_temperaturas = $_GET["numero_temperaturas"];
 
+echo "Numero de temperaturas: $numero_temperaturas";
 
-$temperatura = array();
+$temperaturas = array();
 
 for ($i = 0; $i < $numero_temperaturas; $i++){
 
-    $temperatura[$i] = rand(1 , 30);
-    echo "".$temperatura[$i]."";
+    $temperaturas[$i] = rand(1 , 30);
+    echo "temp[i]: ".$temperaturas[$i]."";
     echo "</br>";
 
 }
 
+
+$suma = 0;
 for ($i = 0; $i < $numero_temperaturas; $i++) {
 
-    
+    $suma = $suma + $temperaturas[$i]; 
 
 }
+$media = $suma / $numero_temperaturas;
+
+echo "Media: $media";
+
+
+echo "<pre>";
+print_r($temperaturas);
+echo "</pre>";
 ?>

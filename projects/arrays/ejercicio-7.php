@@ -23,11 +23,27 @@
     echo "Numero de temperaturas: $numero_temperaturas";
     echo "</br>";
     $temperaturas = array();
-    sort($temperaturas);
-
-    foreach($temperaturas as $clave => $valor)
     
-        $valor = rand(1 , 30);
-        echo "temp[".$clave."]: ".$valor."";
-        echo "</br>";
+	
+
+	for ($i = 0; $i < $numero_temperaturas; $i++){
+    $temperaturas[$i] = rand(1 , 30);
+	sort($temperaturas);
+    echo "temp[i]: ".$temperaturas[$i]."";
+    echo "</br>";
+}
+echo "</br>";
+echo "</br>";
+echo "</br>";
+echo "</br>";
+echo "</br>";
+echo "</br>";
+
+	for ($i = 0; $i < $numero_temperaturas; $i++){
+    $temperaturas[$i] = rand(1 , 30);
+	rsort($temperaturas);
+    echo "temp[i]: ".$temperaturas[$i]."";
+    echo "</br>";
+	}
+    
 ?>

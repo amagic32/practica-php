@@ -28,6 +28,6 @@
     foreach($temperaturas as $clave => $valor)
     
         $valor = rand(1 , 30);
-        echo "temp[i]: ".$valor."";
+        echo "temp[".$clave."]: ".$valor."";
         echo "</br>";
 ?>

@@ -24,10 +24,10 @@ echo "Numero de temperaturas: $numero_temperaturas";
 echo "</br>";
 $temperaturas = array();
 
-for ($i = 0; $i < $numero_temperaturas; $i++){
+ ($i = 0; $i < numero_temperaturas; $i++){
 
-    $temperaturas[$i] = rand(1 , 30);
-    echo "temp[i]: ".$temperaturas[$i]."";
+    $temperaturas[$i] = rand(1 , 30)
+    echo "temp[i]: ".$temperaturas[$i].""
     echo "</br>";
 
 }

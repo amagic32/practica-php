@@ -18,7 +18,7 @@ mysql -uroot mysql -p$DB_ROOT_PASSWD <<< "GRANT ALL PRIVILEGES ON *.* TO root@'%
 # Create Wordpress database
 DB_WP_NAME=tienda
 DB_WP_USER=tienda_user;
-DB_WP_PASSWORD=tienda_user;
+DB_WP_PASSWORD=tienda_password;
 mysql -uroot -p$DB_ROOT_PASSWD <<< "DROP DATABASE IF EXISTS $DB_WP_NAME;"
 mysql -uroot -p$DB_ROOT_PASSWD <<< "CREATE DATABASE $DB_WP_NAME CHARACTER SET utf8;"
 mysql -uroot -p$DB_ROOT_PASSWD <<< "GRANT ALL PRIVILEGES ON $DB_WP_NAME.* TO $DB_WP_USER@'%' IDENTIFIED BY '$DB_WP_PASSWORD'; FLUSH PRIVILEGES;"

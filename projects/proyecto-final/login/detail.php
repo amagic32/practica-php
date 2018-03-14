@@ -1,12 +1,24 @@
 <?php
-// including the database connection file
+
 include_once("../admin/config.php");
-// fetching data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT imagen,codigo,nombre,precio,descripcion FROM producto" );
+
+$codigo = $_GET['codigo'];
+
+
+$query = "SELECT * FROM producto WHERE codigo=$codigo";
+$result = mysqli_query($mysqli, $query);
 
 ?>
 
+<?php
+// including the database connection file
+include_once("../admin/config.php");
 
+$codigo = $_GET['codigo'];
+$query = "SELECT * FROM producto WHERE codigo=$codigo";
+$result = mysqli_query($mysqli, $query);
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -24,7 +36,7 @@ $result = mysqli_query($mysqli, "SELECT imagen,codigo,nombre,precio,descripcion 
 		<td>Nombre</td>
 		<td>Precio</td>
 		<td>Descripcion</td>
-		<td>Detalles</td>
+		<td>Codigo de fabricante</td>
 	</tr>
 
 	<?php
@@ -35,7 +47,7 @@ $result = mysqli_query($mysqli, "SELECT imagen,codigo,nombre,precio,descripcion 
 		echo "<td>".$res['nombre']."</td>";
 		echo "<td>".$res['precio']."</td>";
 		echo "<td>".$res['descripcion']."</td>";
-		echo "<td><a href=\"detail.php?codigo=".$res['codigo']."\">Ver detalles</a></td>";
+		echo "<td>".$res['codigo_fabricante']."</td>";
 		echo "</tr>";
 	}
 	mysqli_close($mysqli);

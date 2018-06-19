@@ -30,6 +30,9 @@ if ($count >=1) {
 
 mysqli_close($mysqli);
 
+
+
+
 ?>
 
 <!doctype html>
@@ -51,6 +54,7 @@ mysqli_close($mysqli);
   </head>
 
   <body class="text-center">
+  <h2><a href="index.php">Volver atras</a></h2>
     <form class="form-signin" method="POST">
       <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>

@@ -24,7 +24,7 @@ CREATE TABLE producto (
   FOREIGN KEY (codigo_fabricante) REFERENCES fabricante(codigo)
 );
 
-INSERT INTO usuario VALUES (1, 'usuario@usuario.es', 'f8032d5cae3de20fcec887f395ec9a6a', 'Usuario');
+INSERT INTO usuario VALUES (1, 'usuario@usuario.es', 'f8032d5cae3de20fcec887f395ec9a6a ', 'Usuario');
 
 INSERT INTO fabricante VALUES(1,'Asus');
 INSERT INTO fabricante VALUES(2,'Lenovo');
